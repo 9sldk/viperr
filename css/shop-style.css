@@ -18,7 +18,7 @@
 }
 
 body {
-    background-image: url('../images/bin.jpg') !important;
+    background-image: url('/viperr/images/bin.jpg') !important;
     background-size: cover;
     background-attachment: fixed;
     background-blend-mode: luminosity;
