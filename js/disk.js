@@ -9,6 +9,21 @@ class AudioPlayer {
         this.initEvents();
     }
 
+
+    playTrack(index) {
+        this.currentTrackIndex = index;
+        const track = this.tracks[index];
+        
+        // Добавьте эту проверку
+        if (this.audio.paused) {
+            this.audio.play().catch(error => {
+                console.error("Playback requires user interaction:", error);
+                // Показать кнопку "Нажмите для воспроизведения"
+            });
+        }
+        
+        this.audio.src = track.audioSrc;
+    }
     initElements() {
         this.playBtn = document.querySelector('.main-play-btn');
         this.nextBtn = document.querySelector('.main-next-btn');
@@ -38,7 +53,7 @@ class AudioPlayer {
         });
         
         this.tracks.forEach((track, index) => {
-            track.playBtn.addEventListener('click', (e) => {
+            track.element.addEventListener('click touchstart', () => {
                 e.stopPropagation();
                 if (this.currentTrackIndex === index && this.isPlaying) {
                     this.pause();
