@@ -1,0 +1,723 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Orbitron:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+    --black: #000;
+    --white: #fff;
+    --gray: #222;
+    --main-font: 'Orbitron', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 5%;
+    z-index: 1000;
+    mix-blend-mode: difference;
+}
+
+.headerdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.2rem;
+    letter-spacing: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.knopki {
+    margin-right: 4%;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.18em;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 0.3rem;
+}
+
+.nav:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #fff;
+    transition: width 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.nav:hover:after {
+    width: 100%;
+}
+
+
+.contentdiv {
+    display: grid;
+    grid-template-columns: 250px 620px 1000px;
+    height: 920px;
+}
+
+.artist-photo {
+    display: block;
+    position: relative;
+    padding: 1em;
+    margin-top: 70px;
+    height: 865px;
+    width: 600px;
+    overflow: hidden;
+}
+
+.artistkai-photo{
+    margin-top: 300px;
+    height: 619px;
+    overflow: hidden;
+}
+
+.artist-image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.artistkai-image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+.artist-photo:hover .artist-image {
+    animation: glitch 0.5s infinite;
+}
+
+.artist-label-kai {
+    position: absolute;
+    bottom: 570px;
+    left: 100px;
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+}
+
+.artist-label-mice {
+    position: absolute;
+    bottom: 30px;
+    left: 250px;
+    font-size: 1.4rem;
+    letter-spacing: 0.7em;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+}
+
+.text {
+    margin-top: 80px;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    letter-spacing: 0.1em;
+}
+
+.text-line {
+    margin-bottom: 0.8rem;
+    position: relative;
+}
+
+
+h1, h2, h3 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+a, button {
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glitch {
+    0% { filter: brightness(1) contrast(1); }
+    25% { filter: brightness(1.2) contrast(1.5); }
+    50% { filter: brightness(0.8) contrast(2); }
+    75% { filter: brightness(1.1) contrast(1.3); }
+    100% { filter: brightness(1) contrast(1); }
+}
+
+.manifesto-line:nth-child(1) { animation: fadeIn 0.8s 0.1s both; }
+.manifesto-line:nth-child(2) { animation: fadeIn 0.8s 0.3s both; }
+.manifesto-line:nth-child(3) { animation: fadeIn 0.8s 0.5s both; }
+
+
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .artist-photo {
+        height: 60vh;
+    }
+
+    .center-content {
+        padding: 40px 20px;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #fff;
+    }
+
+    .knopki {
+        display: none; /* Бургер-меню */
+    }
+}
+
+.release-section {
+    margin-top: 80px;
+    text-align: center;
+    width: 100%;
+}
+
+.release-title {
+    font-size: 3.4rem;
+    letter-spacing: 1.3em;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-weight: 444;
+    margin-left: 50px;
+}
+
+.release-artwork {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 30px;
+    padding: 10px;
+    border: 1px solid white;
+    position: relative;
+}
+
+.release-artwork img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
+.music-player {
+    width: 100%;
+    max-width: 400px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.album-cover {
+    width: 250px;
+    height: 250px;
+    border: 1px solid white;
+    overflow: hidden;
+}
+
+.album-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    transition: opacity 0.3s;
+}
+
+.control-btn:hover {
+    opacity: 0.8;
+}
+
+.track-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+input[type="range"] {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.control-btn:hover {
+    opacity: 0.8;
+}
+
+.progress-container {
+    flex-grow: 1;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    position: relative;
+}
+
+.progress-bar,
+.volume-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: white;
+}
+
+.progress-bar {
+    height: 100%;
+    background: white;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.volume-bar {
+    width: 70%;
+}
+
+.concert-section {
+    margin-top: 60px;
+    width: 100%;
+    position: relative;
+}
+
+.qwe123{
+    text-align: center;
+    width: 100%;
+}
+
+.concert-image {
+    width: 100%;
+    height: 100px;
+    display: block;
+    filter: grayscale(100%);
+}
+
+.ticket-btn {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background: black;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 30px;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.ticket-btn:hover {
+    background: white;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .release-title {
+        font-size: 2rem;
+    }
+    
+    .release-artwork {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .ticket-btn {
+        padding: 8px 20px;
+        font-size: 0.7rem;
+    }
+}
+
+.pink{
+    color: lightpink;
+}
+
+.pink:hover {
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
+    -webkit-mask-size: 200%;
+    animation: wave 2s infinite;
+  }
+  
+  @-webkit-keyframes wave {
+    from {
+      -webkit-mask-position: 150%;
+    }
+    to {
+      -webkit-mask-position: -50%;
+    }
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 150px;
+    font-size: 5rem;
+    letter-spacing: 1.35em;
+    font-weight: 70;
+    opacity: 70%;
+    
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.carousel-wrapper {
+    width: calc(100% - 100px);
+    margin: 0 auto;
+    overflow: hidden;
+}
+.album-info h3 {
+    font-family: 'Michroma', sans-serif;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: var(--pink);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+
+
+.matrix-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Под основным контентом */
+    overflow: hidden;
+    pointer-events: none; /* Чтобы клики проходили сквозь эффект */
+}
+
+.matrix-line {
+    position: absolute;
+    color: rgba(255, 115, 197, 0.5); /* Классический зеленый матрицы */
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 16px;
+    white-space: nowrap;
+    text-shadow: 0 0 5px rgba(255, 0, 191, 0.8);
+    user-select: none;
+    animation: fall linear infinite;
+}
+
+.matrix-line::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 0, 221, 0.438));
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+/* Стили для ПК (оставляем как есть) */
+
+/* Для телевизоров (большие экраны) */
+@media (min-width: 2100px) {
+    .contentdiv {
+        grid-template-columns: 300px 800px 1200px;
+        height: 1200px;
+    }
+    
+    .release-title {
+        font-size: 4rem;
+    }
+}
+
+/* Для планшетов */
+@media (max-width: 1024px) {
+    .contentdiv {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding-top: 80px;
+    }
+    
+    .artist-photo, 
+    .artistkai-photo {
+        display: none;
+    }
+    
+    .release-title {
+        font-size: 2.5rem;
+        margin-left: 0;
+    }
+}
+
+/* Для телефонов */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+    
+    .logo {
+        font-size: 1rem;
+        letter-spacing: 0.5em;
+    }
+    
+    .knopki {
+        display: none; /* Скрываем навигацию */
+    }
+
+    
+    
+    /* Мобильное меню (бургер) */
+    .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    .contentdiv {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Скрываем все фото кроме одной */
+    .artist-photo {
+        display: none;
+    }
+    
+    .artistkai-photo {
+        display: none;
+    }
+    
+    .release-title {
+        font-size: 1.8rem;
+        letter-spacing: 0.5em;
+        margin-left: 0;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+        letter-spacing: 0.5em;
+    }
+    
+    .album-info h3 {
+        font-size: 2rem;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .carousel-item img {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    /* Упрощаем плеер */
+    .music-player {
+        width: 90%;
+    }
+    
+    .concert-image {
+        display: none;
+    }
+
+    .ticket-btn {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin: 20px auto;
+        display: block;
+        width: 80%;
+    }
+    .concert-section {
+        margin-top: 40px;
+        padding: 20px;
+        text-align: center;
+        background-image: url('images/bio6.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-blend-mode: luminosity; /* Добавляем легкий фон */
+    }
+    
+    .ticket-btn {
+        position: static;
+        margin: 20px auto;
+        width: 100%;
+        max-width: 300px;
+        background: #000;
+        border: 2px solid #fff;
+        font-size: 1rem;
+        padding: 15px;
+        display: block;
+    }
+    
+    /* Показываем плеер */
+    .release-section {
+        margin-top: 40px;
+    }
+    
+    .music-player {
+        display: flex !important;
+    }
+    
+    /* Убираем странные отступы у заголовков */
+    .carousel-item h3 {
+        margin-left: 0 !important;
+        font-size: 1.5rem !important;
+        text-align: center;
+    }
+    
+    .carousel-item img {
+        margin-left: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+    .release-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+.mobile-menu-btn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .knopki {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 1rem;
+    }
+    
+    .knopki a {
+        padding: 0.5rem 0;
+    }
+}
+
+/* TV режим */
+@media (min-width: 2100px) and (min-height: 1200px) {
+    body {
+        zoom: 3; /* Увеличиваем весь контент */
+    }
+    
+    .header {
+        padding: 2rem 5%;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .nav {
+        font-size: 1.2rem;
+    }
+}

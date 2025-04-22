@@ -1,0 +1,56 @@
+.main-footer {
+    color: #ff0000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    margin-top: auto;
+}
+
+.footer-left, 
+.footer-center, 
+.footer-right {
+    flex: 1;
+}
+
+.footer-center {
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 0.2em;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.social-link {
+    color: #ff0000;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--pink);
+}
+
+/* Адаптив для мобилок */
+@media (max-width: 768px) {
+    .main-footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .footer-left, 
+    .footer-center, 
+    .footer-right {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+    
+    .social-link {
+        margin: 0 0.5rem;
+    }
+}
