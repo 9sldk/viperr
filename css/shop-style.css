@@ -18,7 +18,7 @@
 }
 
 body {
-    background-image: url('images/bin.jpg');
+    background-image: url('../images/bin.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-blend-mode: luminosity;
