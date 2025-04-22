@@ -27,8 +27,8 @@ window.addEventListener('resize', () => {
 
     function preloadAudios() {
         const audioFiles = [
-            'music/Kai Angel - Madam.mp3',
-            'music/9mice - Narcotic.mp3'
+            '/viperr/music/Kai Angel - Madam.mp3',
+            '/viperr/music/9mice - Narcotic.mp3'
         ];
         
         audioFiles.forEach(file => {
@@ -38,7 +38,7 @@ window.addEventListener('resize', () => {
     }
 
     const metalSound = new Audio(''); 
-    const ticketSound = new Audio('music/cash-register.mp3');
+    const ticketSound = new Audio('/viperr/music/cash-register.mp3');
     metalSound.volume = 0.3;
     ticketSound.volume = 0.4;
 

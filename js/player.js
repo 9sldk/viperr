@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function toggleMute() {
         audio.muted = !audio.muted;
-        muteBtn.innerHTML = audio.muted ? '<img src="images/bobsadqq.png" alt="Mute">' : 
-                                        '<img src="images/sound.png" alt="Volume">';
+        muteBtn.innerHTML = audio.muted ? '<img src="/viperr/images/bobsadqq.png" alt="Mute">' : 
+                                        '<img src="/viperr/images/sound.png" alt="Volume">';
     }
 
     function updateTime() {
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function setVolume() {
         audio.volume = volumeSlider.value;
         audio.muted = false;
-        muteBtn.innerHTML = '<img src="images/sound.png" alt="Volume">';
+        muteBtn.innerHTML = '<img src="/viperr/images/sound.png" alt="Volume">';
     }
 
     playBtn.addEventListener('click', togglePlay);

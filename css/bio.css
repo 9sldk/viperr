@@ -22,7 +22,7 @@ body {
     color: var(--white);
     font-weight: 400;
     letter-spacing: 0.05em;
-    background-image: url('../images/Groupbio.png');
+    background-image: url('/viperr/images/Groupbio.png');
     background-size: cover;
     background-attachment: scroll;
     background-blend-mode: luminosity;

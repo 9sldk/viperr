@@ -23,7 +23,7 @@ body {
     color: var(--white);
     font-weight: 400;
     letter-spacing: 0.05em;
-    background-image: url('../images/Group.png');
+    background-image: url('/viperr/images/Group.png');
     background-size: cover;
     background-attachment: fixed;
     background-blend-mode: luminosity;
